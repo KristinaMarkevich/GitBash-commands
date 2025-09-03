@@ -3,11 +3,11 @@
 Learning how to use GitBash
 
 1.Посмотреть где я
-
+```
 Kristina@DESKTOP-CPUR73B MINGW64 ~
 $ pwd
 /c/Users/Kristina
-
+```
 Kristina@DESKTOP-CPUR73B MINGW64 ~
 $ cd desktop
 
