@@ -1,6 +1,10 @@
 # GitBash-commands
 
-Learning how to use GitBash
+*Learning how to use GitBash*
+
+main branch - the first homework
+
+HM2 branch - the second homework
 
 1.Посмотреть где я
 ```
