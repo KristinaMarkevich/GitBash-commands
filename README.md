@@ -140,37 +140,37 @@ $ cd ..
 ```
 
  18. Вывести содержимое файла tf_3.txt в терминал. 
-
+```
 Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
 $ cat ~/desktop/dir_1/inner_dir_1/tf_3.txt
 bug is a flaw, error, or mistake in a software program that causes it to behave  incorrectly.
 the second 2
 the sec 2
 the SeCoNd 2
-
+```
  19. Найти путь к файлу tf_4.txt
-
+```
 Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
 $ find . -name "tf_4.txt"
 ./inner_dir_1/tf_4.txt
-
+```
  20. Отчистить файл tf_4.txt от содержимого без удаления самого файла.
-
+```
 Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
 $ > inner_dir_1/tf_4.txt
-
+```
  21. Найти путь к файлам у которых есть  “tf” в названии.
-
+```
 Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
 $ find . -name "tf*"
 ./inner_dir_1/tf_3.txt
 ./inner_dir_1/tf_4.txt
 ./tf_1.txt
 ./tf_2.txt
-
+```
 
  22. Найти путь к файлам у которых есть  “tf” в названии и буквы в любом регистре.
-
+```
 Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
 $ find . -iname "Tf*"
 ./inner_dir_1/tf_3.txt
@@ -178,76 +178,155 @@ $ find . -iname "Tf*"
 ./inner_dir_1/tF_5.txt
 ./tf_1.txt
 ./tf_2.txt
-
+```
  23. Найти строки в файлах где есть комбинация букв “sec” в текущей папке
-
+```
 Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
 $ grep sec *
 grep: inner_dir_1: Is a directory
 tf_2.txt:- the second 2
 tf_2.txt:- the third 3the sec 3
-
+```
  24. Найти строки в файлах где есть комбинация букв “sec” в любом регистре в текущей папке
-
+```
 Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
 $ grep sec -i *
 grep: inner_dir_1: Is a directory
 tf_2.txt:- the second 2
 tf_2.txt:- the third 3the sec 3
 tf_2.txt:the seConD 2
-
+```
 
  25. Найти строки в файлах где есть только комбинация букв “sec” в текущей папке
-
+```
 Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
 $ grep sec -w *
 grep: inner_dir_1: Is a directory
 tf_2.txt:- the third 3the sec 3
-
+```
  26. Найти строки в файлах где есть только комбинация букв “sec” в любом регистре в текущей папке
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ grep sec -wi *
+grep: inner_dir_1: Is a directory
+tf_2.txt:- the third 3the sec 3
 
-
+```
  27. Найти строки в файлах где есть комбинация букв “second” в текущей папке
-
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ grep second *
+grep: inner_dir_1: Is a directory
+tf_2.txt:- the second 2
+```
 
  28. Найти строки в файлах где есть комбинация букв “second” в любом регистре в текущей папке
-
-
+```
+$ grep second -wi *
+grep: inner_dir_1: Is a directory
+tf_2.txt:- the second 2
+tf_2.txt:the seConD 2
+```
  29. Найти строки в файлах где есть комбинация букв “second” во всех папках ниже уровнем
-
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ grep second -r
+inner_dir_1/tf_3.txt:the second 2
+tf_2.txt:- the second 2
+```
 
  30. Найти только путь и название файла в строках которых есть комбинация букв “second” в текущей папке
-
-
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ grep second -l -s *
+tf_2.txt
+```
  31. Найти все строки во всех файлах где нет комбинации “second”
-
-
+```
+$ grep second -v -r
+inner_dir_1/tf_3.txt:bug is a flaw, error, or mistake in a software program thatinner_dir_1/tf_3.txt: incorrectly.
+inner_dir_1/tf_3.txt:the sec 2
+inner_dir_1/tf_3.txt:the SeCoNd 2
+inner_dir_1/tF_5.txt:All the leaves are brown (all the leaves are brown)
+inner_dir_1/tF_5.txt:And the sky is gray (and the sky is gray)
+inner_dir_1/tF_5.txt:I've been for a walk (I've been for a walk)
+inner_dir_1/tF_5.txt:On a winter's day (on a winter's day)
+inner_dir_1/tF_5.txt:I'd be safe and warm (I'd be safe and warm)
+inner_dir_1/tF_5.txt:If I was in LA (if I was in LA)
+inner_dir_1/tF_5.txt:California dreamin' (California dreamin')
+inner_dir_1/tF_5.txt:On such a winter's day
+inner_dir_1/tF_5.txt:Stopped into a church
+inner_dir_1/tF_5.txt:I passed along the way
+inner_dir_1/tF_5.txt:Well, I got down on my knees (got down on my knees)
+inner_dir_1/tF_5.txt:And I pretend to pray (I pretend to pray)
+inner_dir_1/tF_5.txt:You know the preacher like the cold (preacher like the cold)
+tf_2.txt:- the first 1
+tf_2.txt:- the third 3the sec 3
+tf_2.txt:the seConD 2
+```
  32. Найти только название и путь к файлам где нет комбинации “second”
-
-
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ grep second -L -r
+inner_dir_1/tf_4.txt
+inner_dir_1/tF_5.txt
+tf_1.txt
+```
  33. Вывести в терминал 4 последних строк любого текстового файла
-
-
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ tail -n 4 tf_2.txt
+- the first 1
+- the second 2
+- the third 3the sec 3
+the seConD 2
+```
  34. Вывести в терминал 4 первые строки любого текстового файла.
-
-
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ head -n 4 inner_dir_1/tF_5.txt
+All the leaves are brown (all the leaves are brown)
+And the sky is gray (and the sky is gray)
+I've been for a walk (I've been for a walk)
+On a winter's day (on a winter's day)
+```
  35. Команда в одну строку. Создать папку и создать текстовый файл с содержиммым.
-
-
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ mkdir inner_dir_2; cat > inner_dir_2/tf_6.txt
+hello
+```
  36. Команда в одну строку. Переместить в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ grep sec -l -r | xargs mv -t inner_dir_1
 
-
+```
 
  37. Команда в одну строку. Скопировать в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”
-
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ grep sec -r -l | xargs cp -t inner_dir_2
+```
 
  38. Команда в одну строку. Найти все строки c “sec” во всех текстовых файлах, скопировать и вставить эти строки в один новый созданный текстовый файл.
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ grep sec -s -r -h | xargs > tf_7.txt
 
-
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ cat tf_7.txt
+- the second 2 - the third 3the sec 3 the second 2 the sec 2 - the second 2 - the third 3the sec 3 the second 2 the sec 2
+```
  39. Команда в одну строку. Удалить текстовые файлы у которых в содержимом есть слово “sec”
-
-
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ grep sec -r -s -l | xargs rm -f
+```
  40. Просто вывести в терминал строку “Good job!!”
-
-
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ echo Good job!
+Good job!
+```
 
