@@ -1,8 +1,8 @@
 1. Сделать папку dir_1 2. Зайти в папку dir_1  3. Создать папку inner_dir_1  4. Посмотреть где ты находишься
-
+```
 Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop
 $ mkdir dir_1
-
+```
 Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop
 $ cd dir_1
 
