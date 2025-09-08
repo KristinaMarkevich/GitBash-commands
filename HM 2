@@ -1,105 +1,196 @@
-1. Сделать папку dir_1 2. Зайти в папку dir_1  3. Создать папку inner_dir_1  4. Посмотреть где ты находишься
+# GitBash-commands
+
+*Learning how to use GitBash*
+
+main branch - the first homework
+
+HM2 branch - the second homework
+
+1.Посмотреть где я
 ```
-Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop
-$ mkdir dir_1
-
-Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop
-$ cd dir_1
-
-Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
-$ mkdir inner_dir_1
-
-Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+Kristina@DESKTOP-CPUR73B MINGW64 ~
 $ pwd
-/c/Users/Kristina/desktop/dir_1
+/c/Users/Kristina
+
+Kristina@DESKTOP-CPUR73B MINGW64 ~
+$ cd desktop
+
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop
+$ pwd
+/c/Users/Kristina/desktop
+```
+2.Создать папку
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop
+$ mkdir folder_one
 ```
 
-5. Находясь в папке dir_1 создать пустой текстовый файл tf_1.txt
-
+4.Создать 3 папки
 ```
-Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
-$ touch tf_1.txt
-```
- 6. Находясь в папке dir_1 через команду cat создать текстовый файл tf_2.txt со следующими строками:
-- the first 1
-- the second 2
-- the third 3
-```
-Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
-$ cat > tf_2.txt
-- the first 1
-- the second 2
-- the third 3
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one
+$ mkdir folder_two folder_three folder_four
 ```
 
- 7. Зайти в папку inner_dir_1
+5.Зайти в любоую папку
 ```
-Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
-$ cd inner_dir_1
-```
- 8. Через cat сделать текстовый файл tf_3.txt  c любыми строками
-```
-Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1/inner_dir_1
-$ cat > tf_3.txt
-bug is a flaw, error, or mistake in a software program that causes it to behave  incorrectly.
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one
+$ cd folder_two
 ```
 
- 9. Через cat добавить в текстовый файл tf_3.txt строку “the second 2”
+6.Создать 5 файлов (3 txt, 2 json)
 ```
-Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1/inner_dir_1
-$ cat >> tf_3.txt
-
-the second 2
-```
- 10. Через cat добавить в текстовый файл tf_3.txt строку “the sec 2”
-```
-Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1/inner_dir_1
-$ cat >> tf_3.txt
-
-the sec 2
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one/folder_two
+$ touch file1.txt file2.txt file3.txt file4.json file5.json
 ```
 
- 11. Через cat добавить в текстовый файл tf_2.txt строку “the sec 3”
+7.Создать 3 папки
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one/folder_two
+$ mkdir folder_1 folder_2 folder_3
+```
+
+8.Вывести список содержимого папки
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one/folder_two
+$ ls
+file1.txt  file3.txt   file5.json  folder_2/
+file2.txt  file4.json  folder_1/   folder_3/
+```
+
+9.Открыть любой txt файл 10.Написать туда что-нибудь, любой текст 11.Сохранить и выйти
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one/folder_two
+$ vim file1.txt
+As he came into the window
+It was the sound of a crescendo
+He came into her apartment
+He left the bloodstains on the carpet
+She ran underneath the table
+He could see she was unable
+So she ran into the bedroom
+She was struck down
+It was her doom
+Annie, are you okay?
+So, Annie, are you okay?
+Are you okay, Annie?
+Annie, are you okay?
+So, Annie, are you okay?
+Are you okay, Annie?
+Annie, are you okay?
+So, Annie, are you okay?
+Are you okay, Annie?
+Annie, are you okay?
+So, Annie, are you okay?
+Are you okay, Annie?
+Annie, are you okay?
+Will you tell us that you're okay?
+There's a sign in the window
+That he struck you - a crescendo, Annie
+He came into your apartment
+He left the bloodstains on the carpet
+Then you ran into the bedroom
+You were struck down
+It was your doom
+Annie, are you okay?
+So, Annie, are you okay?
+Are you okay, Annie?
+You've been hit by
+You've been hit by a smooth criminal
+Ow!
+Ow!
+Aw!
+Annie, are you okay? (I don't know)
+Will you tell us that you're okay? (I don't know)
+There's a sound at the window (I don't know)
+Then he struck you, a crescendo Annie? (I don't know)
+He came into your apartment (I don't know)
+Left bloodstains on the carpet (I don't know why, baby)
+And then you ran into the bedroom (help me)
+You were struck down
+It was your doom Annie (dag gone it)
+Annie, are you okay?
+So, Annie, are you okay?
+Are you okay, Annie?
+You've been hit by
+You've been hit by a smooth criminal
+```
+```
+ECS :wq
+```
+12.Выйти из папки на уровень выше
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one/folder_two
+$ cd ..
+```
+13.Переместить любые 2 файла, которые вы создали, в любую другую папку
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one
+$ mv folder_two/{file2.txt,file3.txt} folder_four
+```
+
+14.Скопировать любые 2 файла, которые вы создали, в любую другую папку
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one
+$ cp folder_four/{file2.txt,file3.txt} folder_three
+```
+
+15.Найти файл по имени
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one
+$ find -name "file*"
+./folder_four/file2.txt
+./folder_four/file3.txt
+./folder_three/file2.txt
+./folder_three/file3.txt
+./folder_two/file1.txt
+./folder_two/file4.json
+./folder_two/file5.json
+
+```
+16.Просмотреть содержимое в реальном времени (команда grep) изучите как она работает
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one
+$ grep "hit by" folder_two/file1.txt
+You've been hit by
+You've been hit by a smooth criminal
+You've been hit by
+You've been hit by a smooth criminal
+
+```
+17.Вывести несколько первых строк из текстового файла
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one
+$ head -n 5 folder_two/file1.txt
+As he came into the window
+It was the sound of a crescendo
+He came into her apartment
+He left the bloodstains on the carpet
+She ran underneath the table
+
+```
+18.Вывести несколько последних строк из текстового файла
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one
+$ tail -n 5 folder_two/file1.txt
+Annie, are you okay?
+So, Annie, are you okay?
+Are you okay, Annie?
+You've been hit by
+You've been hit by a smooth criminal
+
+```
+19.Просмотреть содержимое длинного файла (команда less) изучите как она работает
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one
+$ Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one
+$ less folder_two/file1.txt
 
 
- 12. Через cat добавить в текстовый файл tf_3.txt строку “the SeCoNd 2”
-
-
- 13. Через cat добавить в текстовый файл tf_2.txt строку “the seConD 2”
-
-
- 14. Сделать текстовый файл tf_4.txt в котором будет 15 строк.
-
-
- 15. Сделать текстовый файл tF_5.txt в котором будет 13 строк.
-
-
- 16. Вывести список всех файлов в папке.
-
-
- 17. Выйти из папки inner_dir_1
-
-
- 18. Вывести содержимое файла tf_3.txt в терминал.
- 19. Найти путь к файлу tf_4.txt
- 20. Отчистить файл tf_4.txt от содержимого без удаления самого файла.
- 21. Найти путь к файлам у которых есть  “tf” в названии.
- 22. Найти путь к файлам у которых есть  “tf” в названии и буквы в любом регистре.
- 23. Найти строки в файлах где есть комбинация букв “sec” в текущей папке
- 24. Найти строки в файлах где есть комбинация букв “sec” в любом регистре в текущей папке
- 25. Найти строки в файлах где есть только комбинация букв “sec” в текущей папке
- 26. Найти строки в файлах где есть только комбинация букв “sec” в любом регистре в текущей папке
- 27. Найти строки в файлах где есть комбинация букв “second” в текущей папке
- 28. Найти строки в файлах где есть комбинация букв “second” в любом регистре в текущей папке
- 29. Найти строки в файлах где есть комбинация букв “second” во всех папках ниже уровнем
- 30. Найти только путь и название файла в строках которых есть комбинация букв “second” в текущей папке
- 31. Найти все строки во всех файлах где нет комбинации “second”
- 32. Найти только название и путь к файлам где нет комбинации “second”
- 33. Вывести в терминал 4 последних строк любого текстового файла
- 34. Вывести в терминал 4 первые строки любого текстового файла.
- 35. Команда в одну строку. Создать папку и создать текстовый файл с содержиммым.
- 36. Команда в одну строку. Переместить в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”
- 37. Команда в одну строку. Скопировать в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”
- 38. Команда в одну строку. Найти все строки c “sec” во всех текстовых файлах, скопировать и вставить эти строки в один новый созданный текстовый файл.
- 39. Команда в одну строку. Удалить текстовые файлы у которых в содержимом есть слово “sec”
- 40. Просто вывести в терминал строку “Good job!!”
+Команда less открывает файл в новом окне, возможен поиск по тексту через функцию /текст - подсвечивает все совпадения.
+```
+20.Вывести дату и время
+```
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/folder_one
+$ date
+Thu Sep  4 18:53:20     2025
+```
