@@ -141,7 +141,18 @@ $ cd ..
 
  18. Вывести содержимое файла tf_3.txt в терминал. 
 
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ cat ~/desktop/dir_1/inner_dir_1/tf_3.txt
+bug is a flaw, error, or mistake in a software program that causes it to behave  incorrectly.
+the second 2
+the sec 2
+the SeCoNd 2
+
  19. Найти путь к файлу tf_4.txt
+
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1
+$ find . -name "tf_4.txt"
+./inner_dir_1/tf_4.txt
 
  20. Отчистить файл tf_4.txt от содержимого без удаления самого файла.
 
