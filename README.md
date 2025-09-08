@@ -65,26 +65,81 @@ the sec 2
 
  11. Через cat добавить в текстовый файл tf_2.txt строку “the sec 3”
 
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1/inner_dir_1
+$ cat >> ~/desktop/dir_1/tf_2.txt
+the sec 3
+
 
  12. Через cat добавить в текстовый файл tf_3.txt строку “the SeCoNd 2”
+
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1/inner_dir_1
+$ cat >> tf_3.txt
+
+the SeCoNd 2
 
 
  13. Через cat добавить в текстовый файл tf_2.txt строку “the seConD 2”
 
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1/inner_dir_1
+$ cat >> ~/desktop/dir_1/tf_2.txt
+
+the seConD 2
+
 
  14. Сделать текстовый файл tf_4.txt в котором будет 15 строк.
+
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1/inner_dir_1
+$ cat > tf_4.txt
+Champion, champion
+I'm calling you from the future
+To let you know we've made a mistake
+And there's a fog from the past that's giving me, giving me such a headache
+And I'm back with a madness
+I'm a champion of the people who don't believe in champions
+I got nothing but dreams inside
+I got nothing but dreams
+I'm just young enough to still believe, still believe
+But young enough not to know what to believe in
+Young enough not to know what to believe in, yeah
+If I can live through this
+If I can live through this
+If I can live through this
+I can do anything
 
 
  15. Сделать текстовый файл tF_5.txt в котором будет 13 строк.
 
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1/inner_dir_1
+$ cat > tF_5.txt
+All the leaves are brown (all the leaves are brown)
+And the sky is gray (and the sky is gray)
+I've been for a walk (I've been for a walk)
+On a winter's day (on a winter's day)
+I'd be safe and warm (I'd be safe and warm)
+If I was in LA (if I was in LA)
+California dreamin' (California dreamin')
+On such a winter's day
+Stopped into a church
+I passed along the way
+Well, I got down on my knees (got down on my knees)
+And I pretend to pray (I pretend to pray)
+You know the preacher like the cold (preacher like the cold)
+
 
  16. Вывести список всех файлов в папке.
+
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1/inner_dir_1
+$ ls
+tF_5.txt  tf_3.txt  tf_4.txt
 
 
  17. Выйти из папки inner_dir_1
 
+Kristina@DESKTOP-CPUR73B MINGW64 ~/desktop/dir_1/inner_dir_1
+$ cd ..
 
- 18. Вывести содержимое файла tf_3.txt в терминал.
+
+ 18. Вывести содержимое файла tf_3.txt в терминал. 
  19. Найти путь к файлу tf_4.txt
  20. Отчистить файл tf_4.txt от содержимого без удаления самого файла.
  21. Найти путь к файлам у которых есть  “tf” в названии.
