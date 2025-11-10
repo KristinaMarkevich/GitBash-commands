@@ -2,9 +2,9 @@
 
 *Learning how to use GitBash*
 
-main branch - the first homework
+**main branch - the first homework**
 
-HM2 branch - the second homework
+**HM2 branch - the second homework**
 
 1.Посмотреть где я
 ```
